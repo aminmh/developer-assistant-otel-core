@@ -1,0 +1,28 @@
+{
+  "name": "aminmh/developer-assistant-otel-core",
+  "description": "Framework-agnostic OpenTelemetry contracts and enrichment for Indexr",
+  "type": "library",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=8.1",
+    "open-telemetry/api": "^1.10",
+    "open-telemetry/sdk": "^1.15"
+  },
+  "suggest": {
+    "open-telemetry/exporter-otlp": "^1.4 for OTLP HTTP/protobuf export",
+    "ext-excimer": "Enable bounded 5 ms request/job profiling",
+    "open-telemetry/opentelemetry-auto-pdo": "Enable PDO spans when ext-opentelemetry is installed",
+    "open-telemetry/opentelemetry-auto-guzzle": "Enable Guzzle spans when ext-opentelemetry is installed",
+    "open-telemetry/opentelemetry-auto-psr18": "Enable PSR-18 spans when ext-opentelemetry is installed"
+  },
+  "autoload": {
+    "psr-4": {
+      "Indexr\\Otel\\Core\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "0.1.x-dev"
+    }
+  }
+}
